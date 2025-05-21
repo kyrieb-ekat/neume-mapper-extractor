@@ -155,7 +155,7 @@ def streaming_json_parse(file_path):
 def extract_neume_images():
     # 1. Load the annotations JSON file
     #with open(annotations.json', 'r') as f: # was annotations.json, original is 'real-annotations.json', testing with 'real-annotationsZ.json'
-    json_file_path = '/Users/kyriebouressa/Documents/neume-mapper-extractor/public/episema-largescale-test.json'
+    json_file_path = '/Users/kyriebouressa/Documents/neume-mapper-extractor/public/large-scale-test-2.json' # large-scale-test-2 is a 1,000+ image test
     
     # Parse the file using the advanced streaming parser
     annotations = streaming_json_parse(json_file_path)
