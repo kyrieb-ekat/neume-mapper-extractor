@@ -1,0 +1,238 @@
+[
+  {
+    "type": "nc_d3_s",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_d3_s/nc_d3_s_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_d3_s/nc_d3_s_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_d3_s/nc_d3_s_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_d3_s/nc_d3_s_4.png"
+    ]
+  },
+  {
+    "type": "nc_d3_n",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_d3_n/nc_d3_n_1.png"
+    ]
+  },
+  {
+    "type": "nc_c3",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c3/nc_c3_1.png"
+    ]
+  },
+  {
+    "type": "nc_f3_s",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_f3_s/nc_f3_s_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_f3_s/nc_f3_s_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_f3_s/nc_f3_s_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_f3_s/nc_f3_s_5.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_f3_s/nc_f3_s_6.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_f3_s/nc_f3_s_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_f3_s/nc_f3_s_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_f3_s/nc_f3_s_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_f3_s/nc_f3_s_4.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_f3_s/nc_f3_s_5.png"
+    ]
+  },
+  {
+    "type": "nc_g3_s",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3_s/nc_g3_s_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3_s/nc_g3_s_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3_s/nc_g3_s_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3_s/nc_g3_s_4.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3_s/nc_g3_s_5.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3_s/nc_g3_s_6.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3_s/nc_g3_s_7.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3_s/nc_g3_s_9.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3_s/nc_g3_s_10.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3_s/nc_g3_s_11.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_4.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_5.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_6.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_7.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_8.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_9.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_10.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_11.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_12.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_13.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_14.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_s/nc_g3_s_15.png"
+    ]
+  },
+  {
+    "type": "nc_g3",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3/nc_g3_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3/nc_g3_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3/nc_g3_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3/nc_g3_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3/nc_g3_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3/nc_g3_4.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3/nc_g3_5.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3/nc_g3_6.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3/nc_g3_7.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3/nc_g3_8.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3/nc_g3_9.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3/nc_g3_10.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3/nc_g3_11.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3/nc_g3_12.png"
+    ]
+  },
+  {
+    "type": "nc_a3",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3/nc_a3_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3/nc_a3_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3/nc_a3_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3/nc_a3_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3/nc_a3_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3/nc_a3_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3/nc_a3_4.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3/nc_a3_5.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3/nc_a3_6.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3/nc_a3_7.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3/nc_a3_8.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3/nc_a3_9.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3/nc_a3_10.png"
+    ]
+  },
+  {
+    "type": "nc_a3_s",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_4.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_5.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_6.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_7.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_8.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_9.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_10.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_11.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_12.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_13.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_14.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_15.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_16.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_a3_s/nc_a3_s_17.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_s/nc_a3_s_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_s/nc_a3_s_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_s/nc_a3_s_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_s/nc_a3_s_4.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_s/nc_a3_s_5.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_s/nc_a3_s_6.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_s/nc_a3_s_7.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_s/nc_a3_s_8.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_s/nc_a3_s_9.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_s/nc_a3_s_10.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_s/nc_a3_s_11.png"
+    ]
+  },
+  {
+    "type": "nc_c4",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4/nc_c4_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4/nc_c4_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4/nc_c4_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4/nc_c4_4.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4/nc_c4_5.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4/nc_c4_7.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4/nc_c4_8.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4/nc_c4_9.png"
+    ]
+  },
+  {
+    "type": "nc_g3_n",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3_n/nc_g3_n_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_g3_n/nc_g3_n_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_g3_n/nc_g3_n_1.png"
+    ]
+  },
+  {
+    "type": "nc_f3",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_f3/nc_f3_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_f3/nc_f3_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_f3/nc_f3_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_f3/nc_f3_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_f3/nc_f3_3.png"
+    ]
+  },
+  {
+    "type": "nc_f3_n",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_f3_n/nc_f3_n_1.png"
+    ]
+  },
+  {
+    "type": "nc_e3",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_e3/nc_e3_1.png"
+    ]
+  },
+  {
+    "type": "nc_c4_s",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4_s/nc_c4_s_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4_s/nc_c4_s_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4_s/nc_c4_s_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4_s/nc_c4_s_4.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4_s/nc_c4_s_5.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4_s/nc_c4_s_6.png"
+    ]
+  },
+  {
+    "type": "nc_d4",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_d4/nc_d4_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_d4/nc_d4_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_d4/nc_d4_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_d4/nc_d4_4.png"
+    ]
+  },
+  {
+    "type": "nc_c4_n",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4_n/nc_c4_n_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_c4_n/nc_c4_n_2.png"
+    ]
+  },
+  {
+    "type": "nc_b3",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_b3/nc_b3_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_136r-274/nc_b3/nc_b3_3.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_b3/nc_b3_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_b3/nc_b3_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_b3/nc_b3_3.png"
+    ]
+  },
+  {
+    "type": "nc_a3_n",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_n/nc_a3_n_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_n/nc_a3_n_2.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_a3_n/nc_a3_n_3.png"
+    ]
+  },
+  {
+    "type": "nc_f3_se",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_f3_se/nc_f3_se_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_f3_se/nc_f3_se_2.png"
+    ]
+  },
+  {
+    "type": "nc_d3_se",
+    "urls": [
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_d3_se/nc_d3_se_1.png",
+      "/Users/ekaterina/Documents/neume-mapper-extractor/MEI/extracted_neumes/CDN-Mlr_MS73_076r-154/nc_d3_se/nc_d3_se_2.png"
+    ]
+  }
+]

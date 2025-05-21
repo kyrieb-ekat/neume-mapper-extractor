@@ -1,0 +1,64 @@
+// src/components/App.tsx
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
+import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap'
+import { fetchAnnotations, uploadAnnotations } from '../actions'
+import NeumeViewer from './NeumeViewer'
+import { NeumeAnnotation } from '../types'
+
+interface AppProps {
+  fetchAnnotations: () => void;
+  uploadAnnotations: (annotations: NeumeAnnotation[]) => void;
+}
+
+const App: React.FC<AppProps> = ({ fetchAnnotations, uploadAnnotations }) => {
+  // Fetch annotations when component mounts
+  useEffect(() => {
+    fetchAnnotations()
+  }, [fetchAnnotations])
+
+  return (
+    <>
+      <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
+        <Container>
+          <Navbar.Brand href="#home">Neume Mapper & Extractor</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link href="https://github.com/your-username/neume-mapper-extractor" target="_blank">
+                GitHub
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+      <Container>
+        <Row className="mb-4">
+          <Col>
+            <h1 className="text-center">Neume Image Viewer & Extractor</h1>
+            <p className="text-center text-muted">
+              View, search, and export neume annotations for processing
+            </p>
+          </Col>
+        </Row>
+        
+        <Row>
+          <Col>
+            <NeumeViewer uploadAnnotations={uploadAnnotations} />
+          </Col>
+        </Row>
+        
+        <Row className="mt-5">
+          <Col className="text-center text-muted">
+            <p>
+              Use the "Export Annotations" button to save annotations for processing with the IIIF Python extractor.
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    </>
+  )
+}
+
+export default connect(null, { fetchAnnotations, uploadAnnotations })(App)
