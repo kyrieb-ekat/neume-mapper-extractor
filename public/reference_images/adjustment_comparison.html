@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scale Adjustment Comparison</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2 { color: #333; }
+        .image-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .adjustment-container { margin-bottom: 30px; border: 1px solid #ccc; padding: 20px; border-radius: 5px; }
+        .image-card { border: 1px solid #ddd; padding: 10px; border-radius: 5px; }
+        img { max-width: 100%; border: 1px solid #eee; }
+        .settings { background-color: #f5f5f5; padding: 10px; margin-bottom: 20px; border-radius: 5px; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Scale Adjustment Comparison</h1>
+    <div class="settings">
+        <h3>Settings:</h3>
+        <ul>
+            <li><strong>Base Scale:</strong> Auto</li>
+            <li><strong>Line Width:</strong> 15</li>
+            <li><strong>Box Padding:</strong> 40</li>
+            <li><strong>Corner Size:</strong> 25</li>
+            <li><strong>Color:</strong> red</li>
+        </ul>
+    </div>
+    
+    <h2>Web-Friendly Versions</h2>
+    <div class="image-grid">
+
+        <div class="image-card">
+            <h3>Adjustment: 0.84</h3>
+            <p>Adjusted scale factor: 1.0953</p>
+            <img src="overlay_adjust_0.84_1747787552_web.jpg" alt="Adjustment 0.84">
+            <p><a href="overlay_adjust_0.84_1747787552_web.jpg" target="_blank">View Full Size</a></p>
+        </div>
+
+    </div>
+    
+    <h2>Full-Size Versions</h2>
+    <div class="image-grid">
+
+        <div class="image-card">
+            <h3>Adjustment: 0.84</h3>
+            <p>Adjusted scale factor: 1.0953</p>
+            <img src="overlay_adjust_0.84_1747787552.jpg" alt="Adjustment 0.84">
+            <p><a href="overlay_adjust_0.84_1747787552.jpg" target="_blank">View Full Size</a></p>
+        </div>
+
+    </div>
+</body>
+</html>
