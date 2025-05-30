@@ -1,5 +1,5 @@
 # via_bbox_cropper.py
-# to run from laptop: python via_bbox_cropper.py /Users/ekaterina/documents/neume-mapper-extractor/public/VGG_beneventan_1.csv --image-dir /Users/ekaterina/documents/scriptsorter_projectbackup/dataset/raw_dataset/2 --output /Users/ekaterina/documents/neume-mapper-extractor/public/exported_neumes/beneventan
+# to run from laptop (inside directory ~/documents/neume-mapper-extractor/python/bbox_extraction/): python via_bbox_cropper.py /Users/ekaterina/documents/neume-mapper-extractor/public/VGG_beneventan_1.csv --image-dir /Users/ekaterina/documents/scriptsorter_projectbackup/dataset/raw_dataset/2 --output /Users/ekaterina/documents/neume-mapper-extractor/public/exported_neumes/beneventan
 # to run from lab, use kyriebouressa
 
 import csv
