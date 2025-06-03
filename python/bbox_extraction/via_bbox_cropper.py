@@ -1,7 +1,3 @@
-# via_bbox_cropper.py
-# to run from laptop (inside directory ~/documents/neume-mapper-extractor/python/bbox_extraction/): python via_bbox_cropper.py /Users/ekaterina/documents/neume-mapper-extractor/public/VGG_beneventan_1.csv --image-dir /Users/ekaterina/documents/scriptsorter_projectbackup/dataset/raw_dataset/2 --output /Users/ekaterina/documents/neume-mapper-extractor/public/exported_neumes/beneventan
-# to run from lab, use kyriebouressa
-
 import csv
 import json
 import os
@@ -33,8 +29,17 @@ class VIABoundingBoxCropper:
         """Parse JSON field from VIA CSV (handles double quotes)"""
         if not json_str or json_str == '{}':
             return {}
-        # Replace double quotes with single quotes for JSON parsing
-        cleaned = json_str.replace('""', '"')
+        
+        # Handle different quote escaping patterns
+        cleaned = json_str.strip()
+        
+        # Remove outer quotes if they exist
+        if cleaned.startswith('"') and cleaned.endswith('"'):
+            cleaned = cleaned[1:-1]
+        
+        # Replace escaped double quotes
+        cleaned = cleaned.replace('""', '"')
+        
         try:
             return json.loads(cleaned)
         except json.JSONDecodeError as e:
@@ -54,84 +59,137 @@ class VIABoundingBoxCropper:
         total_annotations = 0
         successful_crops = 0
         
-        with open(csv_path, 'r', encoding='utf-8') as csvfile:
-            reader = csv.DictReader(csvfile)
-            
-            for row in reader:
-                filename = row['filename']
+        try:
+            # Open with UTF-8-sig to handle BOM (Byte Order Mark)
+            with open(csv_path, 'r', encoding='utf-8-sig') as csvfile:
+                # First, let's check the headers
+                reader = csv.DictReader(csvfile)
+                headers = reader.fieldnames
+                print(f"CSV headers found: {headers}")
                 
-                # Skip empty annotations
-                if not row.get('region_shape_attributes') or row.get('region_shape_attributes') == '{}':
-                    continue
+                # Find the filename column (might have BOM prefix)
+                filename_col = None
+                for header in headers:
+                    if header.strip().endswith('filename'):
+                        filename_col = header
+                        break
                 
-                total_annotations += 1
+                if not filename_col:
+                    print(f"Error: 'filename' column not found. Available columns: {headers}")
+                    return
                 
-                try:
-                    # Parse JSON fields
-                    shape_attrs = self.parse_json_field(row['region_shape_attributes'])
-                    region_attrs = self.parse_json_field(row['region_attributes'])
-                    
-                    # Skip if not a rectangle
-                    if shape_attrs.get('name') != 'rect':
-                        print(f"Skipping non-rectangle annotation for {filename}")
-                        continue
-                    
-                    # Extract bounding box coordinates
-                    x = int(shape_attrs['x'])
-                    y = int(shape_attrs['y'])
-                    width = int(shape_attrs['width'])
-                    height = int(shape_attrs['height'])
-                    
-                    # Get label - try different possible keys
-                    label = 'unknown'
-                    for key, value in region_attrs.items():
-                        if value and value != 'undefined':
-                            label = value
-                            break
-                    
-                    # Load image (only once per filename)
-                    if filename not in processed_images:
-                        if image_url_template:
-                            image_url = image_url_template.format(filename=filename)
-                            print(f"Loading {filename} from URL...")
-                            image = self.load_image_from_url(image_url)
-                        elif image_dir:
-                            image_path = os.path.join(image_dir, filename)
-                            print(f"Loading {filename} from {image_path}...")
-                            image = self.load_image_from_path(image_path)
-                        else:
-                            print(f"Error: No image source specified for {filename}")
+                print(f"Using filename column: '{filename_col}'")
+                
+                for row_num, row in enumerate(reader, start=2):  # start=2 because header is row 1
+                    try:
+                        # Debug: print first few rows to see structure
+                        if row_num <= 3:
+                            print(f"Row {row_num}: {dict(row)}")
+                        
+                        filename = row.get(filename_col, '').strip()
+                        if not filename:
+                            print(f"Row {row_num}: Empty filename, skipping")
                             continue
                         
-                        processed_images[filename] = image
-                    else:
-                        image = processed_images[filename]
-                    
-                    # Create label directory
-                    label_dir = os.path.join(self.output_dir, label.replace(' ', '_'))
-                    os.makedirs(label_dir, exist_ok=True)
-                    
-                    # Crop image
-                    cropped_image = image.crop((x, y, x + width, y + height))
-                    
-                    # Create unique filename
-                    region_id = row.get('region_id', 'unknown')
-                    base_name = os.path.splitext(filename)[0]
-                    output_filename = f"{base_name}_region_{region_id}_{label}.jpg"
-                    output_path = os.path.join(label_dir, output_filename)
-                    
-                    # Save cropped image
-                    cropped_image.save(output_path)
-                    print(f"Saved: {output_path}")
-                    successful_crops += 1
-                    
-                    # Add delay to avoid overwhelming servers
-                    if self.delay > 0:
-                        time.sleep(self.delay)
+                        # Skip empty annotations
+                        region_shape = row.get('region_shape_attributes', '').strip()
+                        if not region_shape or region_shape == '{}':
+                            print(f"Row {row_num}: No shape attributes for {filename}, skipping")
+                            continue
                         
-                except Exception as e:
-                    print(f"Error processing annotation for {filename}: {str(e)}")
-                    continue
+                        total_annotations += 1
+                        
+                        # Parse JSON fields
+                        shape_attrs = self.parse_json_field(region_shape)
+                        region_attrs = self.parse_json_field(row.get('region_attributes', '{}'))
+                        
+                        # Skip if not a rectangle
+                        if shape_attrs.get('name') != 'rect':
+                            print(f"Row {row_num}: Skipping non-rectangle annotation for {filename}")
+                            continue
+                        
+                        # Extract bounding box coordinates
+                        try:
+                            x = int(shape_attrs['x'])
+                            y = int(shape_attrs['y'])
+                            width = int(shape_attrs['width'])
+                            height = int(shape_attrs['height'])
+                        except (KeyError, ValueError) as e:
+                            print(f"Row {row_num}: Invalid bounding box coordinates for {filename}: {e}")
+                            continue
+                        
+                        # Get label - try different possible keys
+                        label = 'unknown'
+                        for key, value in region_attrs.items():
+                            if value and value != 'undefined':
+                                label = str(value).strip()
+                                break
+                        
+                        # Load image (only once per filename)
+                        if filename not in processed_images:
+                            try:
+                                if image_url_template:
+                                    image_url = image_url_template.format(filename=filename)
+                                    print(f"Loading {filename} from URL...")
+                                    image = self.load_image_from_url(image_url)
+                                elif image_dir:
+                                    image_path = os.path.join(image_dir, filename)
+                                    if not os.path.exists(image_path):
+                                        print(f"Row {row_num}: Image file not found: {image_path}")
+                                        continue
+                                    print(f"Loading {filename} from {image_path}...")
+                                    image = self.load_image_from_path(image_path)
+                                else:
+                                    print(f"Row {row_num}: No image source specified for {filename}")
+                                    continue
+                                
+                                processed_images[filename] = image
+                            except Exception as e:
+                                print(f"Row {row_num}: Error loading image {filename}: {e}")
+                                continue
+                        else:
+                            image = processed_images[filename]
+                        
+                        # Create label directory
+                        safe_label = label.replace(' ', '_').replace('/', '_').replace('\\', '_')
+                        label_dir = os.path.join(self.output_dir, safe_label)
+                        os.makedirs(label_dir, exist_ok=True)
+                        
+                        # Validate crop coordinates
+                        img_width, img_height = image.size
+                        if x < 0 or y < 0 or x + width > img_width or y + height > img_height:
+                            print(f"Row {row_num}: Bounding box out of image bounds for {filename}")
+                            print(f"  Image size: {img_width}x{img_height}, bbox: ({x},{y},{x+width},{y+height})")
+                            continue
+                        
+                        # Crop image
+                        cropped_image = image.crop((x, y, x + width, y + height))
+                        
+                        # Create unique filename
+                        region_id = row.get('region_id', 'unknown')
+                        base_name = os.path.splitext(filename)[0]
+                        output_filename = f"{base_name}_region_{region_id}_{safe_label}.jpg"
+                        output_path = os.path.join(label_dir, output_filename)
+                        
+                        # Save cropped image
+                        cropped_image.save(output_path, 'JPEG')
+                        print(f"Saved: {output_path}")
+                        successful_crops += 1
+                        
+                        # Add delay to avoid overwhelming servers
+                        if self.delay > 0:
+                            time.sleep(self.delay)
+                            
+                    except Exception as e:
+                        print(f"Row {row_num}: Error processing annotation for {filename}: {str(e)}")
+                        continue
+                        
+        except FileNotFoundError:
+            print(f"Error: CSV file not found: {csv_path}")
+            return
+        except Exception as e:
+            print(f"Error reading CSV file: {e}")
+            return
         
         print(f"\nProcessing complete!")
         print(f"Total annotations: {total_annotations}")
@@ -144,7 +202,7 @@ class VIABoundingBoxCropper:
         """
         annotations = []
         
-        with open(csv_path, 'r', encoding='utf-8') as csvfile:
+        with open(csv_path, 'r', encoding='utf-8-sig') as csvfile:
             reader = csv.DictReader(csvfile)
             
             for row in reader:
@@ -237,32 +295,6 @@ def main():
             args.image_dir,
             args.image_url_template
         )
-
-# Example usage functions
-def process_local_images_example():
-    """Example: Process VIA CSV with local images"""
-    cropper = VIABoundingBoxCropper('output/local_crops')
-    cropper.process_via_csv(
-        'annotations.csv',
-        image_dir='images/'
-    )
-
-def process_remote_images_example():
-    """Example: Process VIA CSV with remote images"""
-    cropper = VIABoundingBoxCropper('output/remote_crops')
-    cropper.process_via_csv(
-        'annotations.csv',
-        image_url_template='https://example.com/images/{filename}'
-    )
-
-def convert_to_json_example():
-    """Example: Convert VIA CSV to standard JSON format"""
-    cropper = VIABoundingBoxCropper()
-    cropper.convert_via_to_standard_json(
-        'annotations.csv',
-        'converted_annotations.json',
-        image_dir='images/'
-    )
 
 if __name__ == "__main__":
     main()
