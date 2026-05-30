@@ -30,10 +30,12 @@ def parse_args():
     p = argparse.ArgumentParser(description="Crop neumes from local corrected JSON annotations.")
     p.add_argument("--input-dir", default=DEFAULT_INPUT)
     p.add_argument("--output-dir", default=DEFAULT_OUTPUT)
+    p.add_argument("--class-id", type=int, default=None,
+                   help="Only export annotations with this classId (e.g. 2). Omit for all classes.")
     return p.parse_args()
 
 
-def crop_page(subdir: Path, output_dir: Path) -> int:
+def crop_page(subdir: Path, output_dir: Path, class_id: int | None = None) -> int:
     json_matches = list(subdir.glob("corrected/*_corrected.json"))
     if not json_matches:
         print(f"  WARNING: no corrected JSON found in {subdir.name}, skipping.")
@@ -64,7 +66,11 @@ def crop_page(subdir: Path, output_dir: Path) -> int:
 
     annotations = data.get("annotations", [])
     saved = 0
-    for idx, ann in enumerate(annotations, start=1):
+    box_counter = 0
+    for ann in annotations:
+        if class_id is not None and ann.get("classId") != class_id:
+            continue
+        box_counter += 1
         bbox = ann.get("bbox")
         if not bbox or len(bbox) < 4:
             continue
@@ -77,7 +83,7 @@ def crop_page(subdir: Path, output_dir: Path) -> int:
         if x2 <= x1 or y2 <= y1:
             continue
         crop = img.crop((x1, y1, x2, y2))
-        filename = f"SG{manuscript}_{page}_{idx:03d}.png"
+        filename = f"SG{manuscript}_{page}_{box_counter:03d}.png"
         crop.save(output_dir / filename)
         saved += 1
 
@@ -102,7 +108,7 @@ def main():
 
     total = 0
     for subdir in subdirs:
-        n = crop_page(subdir, output_dir)
+        n = crop_page(subdir, output_dir, class_id=args.class_id)
         if n:
             print(f"  {subdir.name}: {n} crops saved")
         total += n
